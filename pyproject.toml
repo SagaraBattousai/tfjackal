@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfjackal"
+version = "0.0.1"
+description = "A library for Tensorflow model evaluation"
+readme = "README.rst"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [
+    {name = "James Calo", email = "jamesafcalo@gmail.com"},
+]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "numpy",
+  "tensorflow",
+  "matplotlib"
+]
+
+# [project.scripts]
+# tfjackal = "tfjackal.__main__:main"
+
+# [tool.setuptools.packages.find]
+# exclude = ["results"]
+
+[tool.black]
+preview = true
+
+
+[tool.pytest.ini_options]
+addopts = [
+  "--import-mode=importlib"
+]
+testpaths = [
+"tests"
+]
+
+#filterwarnings = [
+#  #never seen this one before but tensordlow dtypes.py was throwing this one
+#  'ignore:ml_dtypes.float8_e4m3b11 is deprecated:DeprecationWarning'
+#]
