@@ -23,7 +23,8 @@ classifiers = [
 dependencies = [
   "numpy",
   "tensorflow",
-  "matplotlib"
+  "matplotlib",
+  "seaborn"
 ]
 
 # [project.scripts]
